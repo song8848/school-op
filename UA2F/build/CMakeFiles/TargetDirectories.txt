@@ -1,0 +1,7 @@
+/home/song/lede/package/UA2F/build/CMakeFiles/ua2f.dir
+/home/song/lede/package/UA2F/build/CMakeFiles/edit_cache.dir
+/home/song/lede/package/UA2F/build/CMakeFiles/rebuild_cache.dir
+/home/song/lede/package/UA2F/build/CMakeFiles/list_install_components.dir
+/home/song/lede/package/UA2F/build/CMakeFiles/install.dir
+/home/song/lede/package/UA2F/build/CMakeFiles/install/local.dir
+/home/song/lede/package/UA2F/build/CMakeFiles/install/strip.dir

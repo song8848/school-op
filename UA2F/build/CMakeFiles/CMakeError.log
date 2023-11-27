@@ -1,0 +1,29 @@
+Determining if the __malloc_hook exist failed with the following output:
+Change Dir: /home/song/lede/package/UA2F/build/CMakeFiles/CMakeScratch/TryCompile-gwH4j4
+
+Run Build Command(s):/home/song/lede/staging_dir/host/bin/ninja cmTC_b37d9 && [1/2] Building C object CMakeFiles/cmTC_b37d9.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_b37d9.dir/CheckSymbolExists.c.o 
+/home/song/lede/staging_dir/toolchain-aarch64_cortex-a53_gcc-11.3.0_musl/bin/aarch64-openwrt-linux-musl-gcc   -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/home/song/lede/package/UA2F/openwrt/..=.. -Wformat -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro  -std=gnu17 -o CMakeFiles/cmTC_b37d9.dir/CheckSymbolExists.c.o -c /home/song/lede/package/UA2F/build/CMakeFiles/CMakeScratch/TryCompile-gwH4j4/CheckSymbolExists.c
+/home/song/lede/package/UA2F/build/CMakeFiles/CMakeScratch/TryCompile-gwH4j4/CheckSymbolExists.c: In function 'main':
+/home/song/lede/package/UA2F/build/CMakeFiles/CMakeScratch/TryCompile-gwH4j4/CheckSymbolExists.c:8:19: error: '__malloc_hook' undeclared (first use in this function)
+    8 |   return ((int*)(&__malloc_hook))[argc];
+      |                   ^~~~~~~~~~~~~
+/home/song/lede/package/UA2F/build/CMakeFiles/CMakeScratch/TryCompile-gwH4j4/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+ninja: build stopped: subcommand failed.
+
+
+File CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __malloc_hook
+  return ((int*)(&__malloc_hook))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
