@@ -14,7 +14,7 @@ sudo sed -i 's/option rebind_protection 1/option rebind_protection 0/' lede/pack
 
 # Passwall
 
-```bash
+```terminal
 src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main
 src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main
 ```
