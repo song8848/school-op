@@ -7,3 +7,7 @@ sudo sed -i 's/option rebind_protection 1/option rebind_protection 0/' lede/pack
 # UA2F
 
 “Network”>>“Routing and Redirection”>>"ua2f"
+
+# 其他
+
+关闭autoreboot
